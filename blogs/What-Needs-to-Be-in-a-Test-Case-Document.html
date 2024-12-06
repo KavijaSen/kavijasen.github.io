@@ -28,90 +28,100 @@
             <h1>What Needs to Be in a Test Case Document?</h1>
             <p><small>Published on: December 10, 2023</small></p>
         </header>
+            
+<!-- Blog Content -->
+<article>
+    <p>A test case document serves as the foundation for ensuring a systematic and efficient approach to software testing. It provides a detailed description of the testing process, scenarios, and expected results to validate that a software application meets its requirements. Well-structured test cases improve test coverage, repeatability, and quality assurance. Here are the key elements that need to be included in a test case document:</p>
 
-        <!-- Blog Content -->
-        <article>
-            <p>A test case document serves as the foundation for ensuring a systematic and efficient approach to software testing. It provides a detailed description of the testing process, scenarios, and expected results to validate that a software application meets its requirements. Well-structured test cases improve test coverage, repeatability, and quality assurance. Here are the key elements that need to be included in a test case document:</p>
+    <h2>1. Test Case ID</h2>
+    <p>Each test case should have a unique identifier. This makes it easier to reference, organize, and track test cases in a database or test management tool. A common format includes a prefix for the module and a numerical ID (e.g., UI-001, API-101).</p>
 
-            <h2>1. Test Case ID</h2>
-            <p>Each test case should have a unique identifier. This makes it easier to reference, organize, and track test cases in a database or test management tool. A common format includes a prefix for the module and a numerical ID (e.g., UI-001, API-101).</p>
+    <h2>2. Test Case Title</h2>
+    <p>The title should be a concise description of the test case's objective. For example, "Verify user login with valid credentials."</p>
 
-            <h2>2. Test Case Title</h2>
-            <p>The title should be a concise description of the test case's objective. For example, "Verify user login with valid credentials."</p>
+    <h2>3. Objective/Description</h2>
+    <p>This section provides a clear and detailed explanation of what the test case aims to verify. It should state the purpose of the test and its expected outcome. Example: To ensure that the user is redirected to the dashboard after entering valid credentials.</p>
 
-            <h2>3. Objective/Description</h2>
-            <p>This section provides a clear and detailed explanation of what the test case aims to verify. It should state the purpose of the test and its expected outcome.
-            Example: To ensure that the user is redirected to the dashboard after entering valid credentials.</p>
+    <h2>4. Preconditions</h2>
+    <p>List all the prerequisites that must be satisfied before executing the test case. This could include:</p>
+    <ul>
+        <li>Test environment setup (e.g., browser version, operating system).</li>
+        <li>Test data preparation.</li>
+        <li>User roles and permissions.</li>
+    </ul>
 
-            <h2>4. Preconditions</h2>
-            <p>List all the prerequisites that must be satisfied before executing the test case. This could include:
-                <nobr> 
-                <ul><li>Test environment setup (e.g., browser version, operating system).</li>
-                <li>Test data preparation.</li>
-                <li>User roles and permissions.</li></p>
+    <h2>5. Test Steps</h2>
+    <p>Provide step-by-step instructions on how to execute the test case. Each step should be clear, specific, and actionable.</p>
+    <ul>
+        <li>Open the login page.</li>
+        <li>Enter a valid username in the username field.</li>
+        <li>Enter a valid password in the password field.</li>
+        <li>Click the "Login" button.</li>
+    </ul>
 
-            <h2>5. Test Steps</h2>
-            <p>Provide step-by-step instructions on how to execute the test case. Each step should be clear, specific, and actionable.
-                Example:
-                &nbsp; 
-                 <ul><li>Open the login page.</li>
-                <li>Enter a valid username in the username field.</li>
-                <li>Enter a valid password in the password field.</li>
-                <li>Click the "Login" button.</li></p>   
+    <h2>6. Test Data</h2>
+    <p>Include the data required to execute the test, such as:</p>
+    <ul>
+        <li>Input values.</li>
+        <li>User credentials.</li>
+        <li>API payloads.</li>
+    </ul>
+    <p>Clearly specify whether the data is static (hardcoded) or dynamic (generated at runtime).</p>
 
-            <h2>6. Test Data</h2>
-            <p>Include the data required to execute the test, such as:
-                 <ul><li>Input values.</li>
-                <li>User credentials.</li>
-                <li>API payloads.</li>
-                Clearly specify whether the data is static (hardcoded) or dynamic (generated at runtime). </p>
+    <h2>7. Expected Results</h2>
+    <p>Describe the expected outcome after executing the test steps. This should detail what the system should do if it behaves correctly.</p>
+    <ul>
+        <li>The user is successfully logged in.</li>
+        <li>The dashboard page loads within 2 seconds.</li>
+        <li>A welcome message is displayed: "Welcome, [User's Name]."</li>
+    </ul>
 
-            <h2>7. Expected Results</h2>
-            <p>Describe the expected outcome after executing the test steps. This should detail what the system should do if it behaves correctly.
-            Example:
-                 <ul><li>The user is successfully logged in.</li>
-                <li>The dashboard page loads within 2 seconds.</li>
-                <li>A welcome message is displayed: "Welcome, [User's Name]."</li>
-            </p>
+    <h2>8. Actual Results</h2>
+    <p>During execution, document the actual behavior of the system. This helps in identifying discrepancies between expected and actual outcomes.</p>
 
-            <h2>8. Actual Results</h2>
-            <p>During execution, document the actual behavior of the system. This helps in identifying discrepancies between expected and actual outcomes.</p>
+    <h2>9. Pass/Fail Criteria</h2>
+    <p>State how the test case will be evaluated. Typically, this involves comparing the actual results to the expected results:</p>
+    <ul>
+        <li>Pass: All expected results are met.</li>
+        <li>Fail: Any deviation from the expected results.</li>
+    </ul>
 
-            <h2>9. Pass/Fail Criteria</h2>
-            <p>State how the test case will be evaluated. Typically, this involves comparing the actual results to the expected results:
-               <ul><li>Pass: All expected results are met.</li>
-                <li>Fail: Any deviation from the expected results.</p></ul> 
+    <h2>10. Priority and Severity</h2>
+    <p>Assign a priority level (High, Medium, Low) to indicate the test case's importance and impact. Severity relates to the potential consequences of failure for this test case.</p>
 
-            <h2>10. Priority and Severity</h2>
-            <p>Assign a priority level (High, Medium, Low) to indicate the test case's importance and impact. Severity relates to the potential consequences of failure for this test case.</p>
+    <h2>11. Test Environment</h2>
+    <p>Document the environment where the test case is executed, such as:</p>
+    <ul>
+        <li>Browser version (e.g., Chrome 96.0).</li>
+        <li>Operating system (e.g., Windows 11).</li>
+        <li>Database version (e.g., MySQL 8.0).</li>
+    </ul>
 
-            <h2>11. Test Environment</h2>
-            <p>Document the environment where the test case is executed, such as:
-                <ul><li>Browser version (e.g., Chrome 96.0).</li>
-                <li>Operating system (e.g., Windows 11).</li>
-                <li>Database version (e.g., MySQL 8.0).</li></p></ul>
+    <h2>12. Test Case Status</h2>
+    <p>Include the status of the test case:</p>
+    <ul>
+        <li>Draft: Test case is under development.</li>
+        <li>Reviewed: Test case has been reviewed and approved.</li>
+        <li>Executed: Test case has been run.</li>
+    </ul>
 
-            <h2>12. Test Case Status</h2>
-            <p>Include the status of the test case:
-                <ul><li>Draft: Test case is under development.</li>
-                <li>Reviewed: Test case has been reviewed and approved.</li>
-                <li>Executed: Test case has been run.</p></li></ul>
+    <h2>13. Associated Requirements</h2>
+    <p>Reference the specific requirements, user stories, or acceptance criteria that the test case is designed to validate. This ensures traceability and helps link test cases to project documentation.</p>
 
-            <h2>13. Associated Requirements</h2>
-            <p>Reference the specific requirements, user stories, or acceptance criteria that the test case is designed to validate. This ensures traceability and helps link test cases to project documentation.</p>
+    <h2>14. Dependencies</h2>
+    <p>Highlight any dependencies that could affect the test case, such as:</p>
+    <ul>
+        <li>Other test cases that must be executed first.</li>
+        <li>External systems or APIs that the test relies on.</li>
+    </ul>
 
-             <h2>14. Dependencies</h2>
-            <p>Highlight any dependencies that could affect the test case, such as:
-                <ul><li>Other test cases that must be executed first.</li>
-                <li>External systems or APIs that the test relies on.</li></ul></p>
+    <h2>15. Attachments/References</h2>
+    <p>Include any relevant files, screenshots, or logs that provide additional context or support for the test case.</p>
 
-            <h2>15. Attachments/References</h2>
-            <p>Include any relevant files, screenshots, or logs that provide additional context or support for the test case.</p>
+    <h2>16. Reviewer and Author Details</h2>
+    <p>Document the name of the person who wrote the test case and the reviewer who approved it. This provides accountability and a point of contact for clarifications.</p>
+</article>
 
-            <h2>16. Reviewer and Author Details</h2>
-            <p>Document the name of the person who wrote the test case and the reviewer who approved it. This provides accountability and a point of contact for clarifications.</p>
-
-        </article>
 
         <!-- Footer -->
         <footer>
