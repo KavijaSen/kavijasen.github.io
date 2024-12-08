@@ -65,66 +65,67 @@ Feature: User Login
                 <li>Test coverage: Helps ensure that edge cases and all possible combinations are tested.</li>
             </ul>
 
-            <h3>Example DDT Implementation:</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Username</th>
-                        <th>Password</th>
-                        <th>Expected Result</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>admin</td>
-                        <td>admin123</td>
-                        <td>Success</td>
-                    </tr>
-                    <tr>
-                        <td>user</td>
-                        <td>user123</td>
-                        <td>Success</td>
-                    </tr>
-                    <tr>
-                        <td>invalidUser</td>
-                        <td>invalidPass</td>
-                        <td>Failure</td>
-                    </tr>
-                </tbody>
-            </table>
+<h3>Example DDT Implementation:</h3>
+<table style="width:100%; border-collapse: collapse; text-align: left;">
+    <thead>
+        <tr style="border: 1px solid #ddd; background-color: #f2f2f2;">
+            <th style="border: 1px solid #ddd; padding: 8px;">Username</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Password</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Expected Result</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="border: 1px solid #ddd;">
+            <td style="border: 1px solid #ddd; padding: 8px;">admin</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">admin123</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Success</td>
+        </tr>
+        <tr style="border: 1px solid #ddd;">
+            <td style="border: 1px solid #ddd; padding: 8px;">user</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">user123</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Success</td>
+        </tr>
+        <tr style="border: 1px solid #ddd;">
+            <td style="border: 1px solid #ddd; padding: 8px;">invalidUser</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">invalidPass</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Failure</td>
+        </tr>
+    </tbody>
+</table>
+
 
             <h2>BDD vs. DDT: Key Differences</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Aspect</th>
-                        <th>BDD</th>
-                        <th>DDT</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Focus</td>
-                        <td>Describing system behavior in business terms</td>
-                        <td>Testing multiple data sets efficiently</td>
-                    </tr>
-                    <tr>
-                        <td>Approach</td>
-                        <td>Scenario-based</td>
-                        <td>Data-driven</td>
-                    </tr>
-                    <tr>
-                        <td>Stakeholder Involvement</td>
-                        <td>High (business and technical teams collaborate)</td>
-                        <td>Low (primarily involves testers and developers)</td>
-                    </tr>
-                    <tr>
-                        <td>Test Design</td>
-                        <td>Written in natural language (Given-When-Then)</td>
-                        <td>Script-based with external data sources</td>
-                    </tr>
-                </tbody>
-            </table>
+<table style="width:100%; border-collapse: collapse; text-align: left;">
+    <thead>
+        <tr style="border: 1px solid #ddd; background-color: #f2f2f2;">
+            <th style="border: 1px solid #ddd; padding: 8px;">Aspect</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">BDD</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">DDT</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="border: 1px solid #ddd;">
+            <td style="border: 1px solid #ddd; padding: 8px;">Focus</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Describing system behavior in business terms</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Testing multiple data sets efficiently</td>
+        </tr>
+        <tr style="border: 1px solid #ddd;">
+            <td style="border: 1px solid #ddd; padding: 8px;">Approach</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Scenario-based</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Data-driven</td>
+        </tr>
+        <tr style="border: 1px solid #ddd;">
+            <td style="border: 1px solid #ddd; padding: 8px;">Stakeholder Involvement</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">High (business and technical teams collaborate)</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Low (primarily involves testers and developers)</td>
+        </tr>
+        <tr style="border: 1px solid #ddd;">
+            <td style="border: 1px solid #ddd; padding: 8px;">Test Design</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Written in natural language (Given-When-Then)</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Script-based with external data sources</td>
+        </tr>
+    </tbody>
+</table>
 
             <h2>When to Use BDD?</h2>
             <p>Use BDD when:</p>
