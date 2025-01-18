@@ -1282,7 +1282,7 @@ input, select, textarea {
 					.row.gtr-200 > * {
 						padding: 2.5em 0 0 2.5em;
 					}
-
+	
 					.row.gtr-200.gtr-uniform {
 						margin-top: -2.5em;
 					}
@@ -1304,11 +1304,14 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url("overlay.png"), url("bg.jpg");
-		background-repeat: repeat, no-repeat;
-		background-size: auto, 100% 100%;
-		background-attachment: fixed;
-		overflow-y: scroll;
+
+    	background-image: url("overlay.png"), url("bg.jpg");
+    	background-repeat: repeat, no-repeat;
+    	background-size: cover, cover; /* Ensure both images scale properly */
+    	background-attachment: fixed;
+    	overflow-y: scroll;
+    	background-position: center center; /* Keeps the images centered */
+
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
