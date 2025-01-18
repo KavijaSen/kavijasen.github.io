@@ -7,7 +7,7 @@
     <link rel="icon" href="../favicon.ico"> 
     <noscript><link rel="stylesheet" href="../noscript.css" /></noscript>
 
-    <title>Effective Conflict Management in Agile Teams</title>
+    <title>Best Practices for Quality Assurance (QA) Engineers: Ensuring Top-Notch Software Quality</title>
 </head>
 <body class="is-preload">
 
@@ -18,20 +18,19 @@
         <nav id="nav">
             <a href="" class="icon solid fa-blog"><span>Doc</span></a>
             <a href="../" class="icon solid fa-home"><span>Home</span></a>
-            <a href="../blog-list.html" class="icon solid fa-pencil-alt"><span>Blogs</span></a>
+            <a href="blog-list.html" class="icon solid fa-pencil-alt"><span>Blogs</span></a>
         </nav>
 
         <div id="main">
         
         <article id="blog" class="panel">
         <header>
-            <h1>Effective Conflict Management in Agile Teams</h1>
+               <h1>Effective Conflict Management in Agile Teams</h1>
             <p><small>Published on: March 23, 2024</small></p>
         </header>
 
         <!-- Blog Content -->
         <article>
-
             <p>In any collaborative environment, especially one as dynamic as an Agile team, conflicts are inevitable. Different perspectives, varying priorities, and diverse work styles can sometimes create tension. However, conflict is not necessarily a negative force. When managed effectively, it can lead to creative solutions, better decision-making, and a more cohesive team. In this blog, we’ll explore conflict management in Agile environments and offer strategies to transform conflict into an opportunity for growth and improvement.</p>
             
 			<section>
@@ -96,8 +95,6 @@
         <p>In Agile teams, conflict is not something to be feared or avoided. Instead, it should be embraced as a natural part of the collaborative process. By addressing conflicts early and managing them constructively, Agile teams can turn disagreements into opportunities for growth, innovation, and improved team dynamics.</p>
         <p>With open communication, empathy, and a focus on collective problem-solving, conflict can be a catalyst for positive change. Agile project management provides the structure and framework to deal with conflict in a way that enhances team performance and leads to better results.</p>
     </section>
-
-            
         </article>
 
         <!-- Footer -->
