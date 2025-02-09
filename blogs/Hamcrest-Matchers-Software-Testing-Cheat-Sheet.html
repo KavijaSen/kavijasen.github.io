@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css"> 
+    <link rel="icon" href="../favicon.ico"> 
+    <noscript><link rel="stylesheet" href="../noscript.css" /></noscript>
+
+    <title>Hamcrest Matchers: Software Testing Cheat Sheet</title>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Nav -->
+        <nav id="nav">
+            <a href="" class="icon solid fa-blog"><span>Doc</span></a>
+            <a href="../" class="icon solid fa-home"><span>Home</span></a>
+            <a href="../blog-list.html" class="icon solid fa-pencil-alt"><span>Blogs</span></a>
+        </nav>
+
+        <div id="main">
+        
+        <article id="blog" class="panel">
+        <header>
+            <h1>Hamcrest Matchers: Software Testing Cheat Sheet</h1>
+            <p><small>Published on: August 30, 2024</small></p>
+        </header>
+
+        <!-- Blog Content -->
+        <article>
+
+            <p>Hamcrest Matchers is a Java library that provides a flexible and readable way to write assertions, making it easier to match arrays, collections, numbers, strings, and other objects in tests. It is commonly used for unit testing and works well with JUnit, TestNG, and other testing frameworks.
+                Hamcrest is not bundled by default with JUnit 5 but is included in JUnit 4. In Maven projects, if using JUnit 4, Hamcrest is already available. However, for JUnit 5 or standalone usage, you must explicitly add the Hamcrest dependency in your pom.xml.</p>
+
+            <h2>Below are a few commonly used Hamcrest assertions:</h2>
+
+            <table>
+        <tr>
+            <th>Matcher</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td><code>assertThat(value, equalTo(expected))</code></td>
+            <td>Checks if the actual value is equal to the expected value.</td>
+            <td><code>assertThat(5, equalTo(5));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(value, not(expected))</code></td>
+            <td>Checks if the actual value is not equal to the expected value.</td>
+            <td><code>assertThat(5, not(4));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(value, is(expected))</code></td>
+            <td>A readable alias for <code>equalTo()</code>.</td>
+            <td><code>assertThat("hello", is("hello"));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(value, containsString(substring))</code></td>
+            <td>Checks if a string contains a specific substring.</td>
+            <td><code>assertThat("hello world", containsString("world"));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(value, startsWith(prefix))</code></td>
+            <td>Checks if a string starts with a given prefix.</td>
+            <td><code>assertThat("Hamcrest", startsWith("Ham"));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(value, endsWith(suffix))</code></td>
+            <td>Checks if a string ends with a given suffix.</td>
+            <td><code>assertThat("Hamcrest", endsWith("crest"));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(value, greaterThan(expected))</code></td>
+            <td>Checks if the value is greater than the expected value.</td>
+            <td><code>assertThat(10, greaterThan(5));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(value, lessThan(expected))</code></td>
+            <td>Checks if the value is less than the expected value.</td>
+            <td><code>assertThat(5, lessThan(10));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(value, anyOf(matcher1, matcher2))</code></td>
+            <td>Passes if at least one matcher condition is met.</td>
+            <td><code>assertThat(7, anyOf(equalTo(7), greaterThan(10)));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(value, allOf(matcher1, matcher2))</code></td>
+            <td>Passes if all matcher conditions are met.</td>
+            <td><code>assertThat(7, allOf(greaterThan(5), lessThan(10)));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(collection, hasSize(size))</code></td>
+            <td>Checks if a collection has the expected number of elements.</td>
+            <td><code>assertThat(Arrays.asList(1,2,3), hasSize(3));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(collection, hasItem(item))</code></td>
+            <td>Checks if a collection contains a specific item.</td>
+            <td><code>assertThat(Arrays.asList("apple", "banana"), hasItem("banana"));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(map, hasKey(key))</code></td>
+            <td>Checks if a map contains a specific key.</td>
+            <td><code>assertThat(myMap, hasKey("username"));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(map, hasValue(value))</code></td>
+            <td>Checks if a map contains a specific value.</td>
+            <td><code>assertThat(myMap, hasValue("admin"));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(object, hasProperty("property", value))</code></td>
+            <td>Checks if an object has a specific property with the expected value.</td>
+            <td><code>assertThat(user, hasProperty("name", equalTo("Alice"));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(list, contains(item1, item2))</code></td>
+            <td>Checks if a list contains the specified items in the exact order.</td>
+            <td><code>assertThat(Arrays.asList(1,2,3), contains(1,2,3));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(list, containsInAnyOrder(item1, item2))</code></td>
+            <td>Checks if a list contains the specified items in any order.</td>
+            <td><code>assertThat(Arrays.asList(3,2,1), containsInAnyOrder(1,2,3));</code></td>
+        </tr>
+        <tr>
+            <td><code>assertThat(value, instanceOf(Class.class))</code></td>
+            <td>Checks if an object is an instance of a specific class.</td>
+            <td><code>assertThat("hello", instanceOf(String.class));</code></td>
+        </tr>
+    </table>
+            
+    <p>Hamcrest’s expressive matchers make your unit tests more readable and maintainable. They allow for complex assertions in a simple, fluent style and can be extended to suit the needs of your project. Whether you're working on simple tests or more complex integrations, Hamcrest provides powerful tools for verifying your code.</p>     
+        
+        </article>
+
+        <!-- Footer -->
+        <footer>
+            <p><a href="../blog-list.html" class="button">Back to Blog List</a></p>
+        </footer>
+
+    </div> 
+
+    <!-- Scripts -->
+    <script src="../jquery.min.js"></script>
+    <script src="../browser.min.js"></script>
+    <script src="../breakpoints.min.js"></script>
+    <script src="../util.js"></script>
+    <script src="../main.js"></script>
+
+</body>
+</html>
