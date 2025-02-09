@@ -37,103 +37,68 @@
 
             <h2>Below are a few commonly used Hamcrest assertions:</h2>
 
-            <table>
-        <tr>
-            <th>Matcher</th>
-            <th>Description</th>
-            <th>Example</th>
+<table style="width:100%; border-collapse: collapse; text-align: left;">
+    <thead>
+        <tr style="border: 1px solid #8c8888; background-color: #f2f2f2;">
+            <th style="border: 1px solid #8c8888; padding: 8px;">Assertion</th>
+            <th style="border: 1px solid #8c8888; padding: 8px;">Matcher</th>
+            <th style="border: 1px solid #8c8888; padding: 8px;">Description</th>
         </tr>
-        <tr>
-            <td><code>assertThat(value, equalTo(expected))</code></td>
-            <td>Checks if the actual value is equal to the expected value.</td>
-            <td><code>assertThat(5, equalTo(5));</code></td>
+    </thead>
+    <tbody>
+        <tr style="border: 1px solid #8c8888;">
+            <td style="border: 1px solid #8c8888; padding: 8px;">assertThat(value, equalTo(expected))</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">equalTo()</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">Checks if the value is equal to the expected value.</td>
         </tr>
-        <tr>
-            <td><code>assertThat(value, not(expected))</code></td>
-            <td>Checks if the actual value is not equal to the expected value.</td>
-            <td><code>assertThat(5, not(4));</code></td>
+        <tr style="border: 1px solid #8c8888;">
+            <td style="border: 1px solid #8c8888; padding: 8px;">assertThat(value, not(equalTo(expected)))</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">not()</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">Checks if the value is **not** equal to the expected value.</td>
         </tr>
-        <tr>
-            <td><code>assertThat(value, is(expected))</code></td>
-            <td>A readable alias for <code>equalTo()</code>.</td>
-            <td><code>assertThat("hello", is("hello"));</code></td>
+        <tr style="border: 1px solid #8c8888;">
+            <td style="border: 1px solid #8c8888; padding: 8px;">assertThat(value, greaterThan(expected))</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">greaterThan()</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">Checks if the value is greater than the expected value.</td>
         </tr>
-        <tr>
-            <td><code>assertThat(value, containsString(substring))</code></td>
-            <td>Checks if a string contains a specific substring.</td>
-            <td><code>assertThat("hello world", containsString("world"));</code></td>
+        <tr style="border: 1px solid #8c8888;">
+            <td style="border: 1px solid #8c8888; padding: 8px;">assertThat(value, lessThan(expected))</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">lessThan()</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">Checks if the value is less than the expected value.</td>
         </tr>
-        <tr>
-            <td><code>assertThat(value, startsWith(prefix))</code></td>
-            <td>Checks if a string starts with a given prefix.</td>
-            <td><code>assertThat("Hamcrest", startsWith("Ham"));</code></td>
+        <tr style="border: 1px solid #8c8888;">
+            <td style="border: 1px solid #8c8888; padding: 8px;">assertThat(value, containsString(expected))</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">containsString()</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">Checks if the string contains the expected substring.</td>
         </tr>
-        <tr>
-            <td><code>assertThat(value, endsWith(suffix))</code></td>
-            <td>Checks if a string ends with a given suffix.</td>
-            <td><code>assertThat("Hamcrest", endsWith("crest"));</code></td>
+        <tr style="border: 1px solid #8c8888;">
+            <td style="border: 1px solid #8c8888; padding: 8px;">assertThat(value, startsWith(expected))</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">startsWith()</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">Checks if the string starts with the expected prefix.</td>
         </tr>
-        <tr>
-            <td><code>assertThat(value, greaterThan(expected))</code></td>
-            <td>Checks if the value is greater than the expected value.</td>
-            <td><code>assertThat(10, greaterThan(5));</code></td>
+        <tr style="border: 1px solid #8c8888;">
+            <td style="border: 1px solid #8c8888; padding: 8px;">assertThat(value, endsWith(expected))</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">endsWith()</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">Checks if the string ends with the expected suffix.</td>
         </tr>
-        <tr>
-            <td><code>assertThat(value, lessThan(expected))</code></td>
-            <td>Checks if the value is less than the expected value.</td>
-            <td><code>assertThat(5, lessThan(10));</code></td>
+        <tr style="border: 1px solid #8c8888;">
+            <td style="border: 1px solid #8c8888; padding: 8px;">assertThat(value, hasSize(expected))</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">hasSize()</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">Checks if the collection has the expected size.</td>
         </tr>
-        <tr>
-            <td><code>assertThat(value, anyOf(matcher1, matcher2))</code></td>
-            <td>Passes if at least one matcher condition is met.</td>
-            <td><code>assertThat(7, anyOf(equalTo(7), greaterThan(10)));</code></td>
+        <tr style="border: 1px solid #8c8888;">
+            <td style="border: 1px solid #8c8888; padding: 8px;">assertThat(value, hasItem(expected))</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">hasItem()</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">Checks if the collection contains the expected item.</td>
         </tr>
-        <tr>
-            <td><code>assertThat(value, allOf(matcher1, matcher2))</code></td>
-            <td>Passes if all matcher conditions are met.</td>
-            <td><code>assertThat(7, allOf(greaterThan(5), lessThan(10)));</code></td>
+        <tr style="border: 1px solid #8c8888;">
+            <td style="border: 1px solid #8c8888; padding: 8px;">assertThat(value, empty())</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">empty()</td>
+            <td style="border: 1px solid #8c8888; padding: 8px;">Checks if the collection is empty.</td>
         </tr>
-        <tr>
-            <td><code>assertThat(collection, hasSize(size))</code></td>
-            <td>Checks if a collection has the expected number of elements.</td>
-            <td><code>assertThat(Arrays.asList(1,2,3), hasSize(3));</code></td>
-        </tr>
-        <tr>
-            <td><code>assertThat(collection, hasItem(item))</code></td>
-            <td>Checks if a collection contains a specific item.</td>
-            <td><code>assertThat(Arrays.asList("apple", "banana"), hasItem("banana"));</code></td>
-        </tr>
-        <tr>
-            <td><code>assertThat(map, hasKey(key))</code></td>
-            <td>Checks if a map contains a specific key.</td>
-            <td><code>assertThat(myMap, hasKey("username"));</code></td>
-        </tr>
-        <tr>
-            <td><code>assertThat(map, hasValue(value))</code></td>
-            <td>Checks if a map contains a specific value.</td>
-            <td><code>assertThat(myMap, hasValue("admin"));</code></td>
-        </tr>
-        <tr>
-            <td><code>assertThat(object, hasProperty("property", value))</code></td>
-            <td>Checks if an object has a specific property with the expected value.</td>
-            <td><code>assertThat(user, hasProperty("name", equalTo("Alice"));</code></td>
-        </tr>
-        <tr>
-            <td><code>assertThat(list, contains(item1, item2))</code></td>
-            <td>Checks if a list contains the specified items in the exact order.</td>
-            <td><code>assertThat(Arrays.asList(1,2,3), contains(1,2,3));</code></td>
-        </tr>
-        <tr>
-            <td><code>assertThat(list, containsInAnyOrder(item1, item2))</code></td>
-            <td>Checks if a list contains the specified items in any order.</td>
-            <td><code>assertThat(Arrays.asList(3,2,1), containsInAnyOrder(1,2,3));</code></td>
-        </tr>
-        <tr>
-            <td><code>assertThat(value, instanceOf(Class.class))</code></td>
-            <td>Checks if an object is an instance of a specific class.</td>
-            <td><code>assertThat("hello", instanceOf(String.class));</code></td>
-        </tr>
-    </table>
+    </tbody>
+</table>
+
             
     <p>Hamcrest’s expressive matchers make your unit tests more readable and maintainable. They allow for complex assertions in a simple, fluent style and can be extended to suit the needs of your project. Whether you're working on simple tests or more complex integrations, Hamcrest provides powerful tools for verifying your code.</p>     
         
