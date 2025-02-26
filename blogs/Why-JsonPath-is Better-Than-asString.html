@@ -7,6 +7,8 @@
     <link rel="icon" href="../favicon.ico"> 
     <noscript><link rel="stylesheet" href="../noscript.css" /></noscript>
     
+            <title>Why JsonPath is Better Than asString() for Extracting API Response Data in RestAssured</title>
+    
     <style>
 
         code {
@@ -48,7 +50,7 @@
         <article>
 
                <article>
-        <h1>Why JsonPath is Better Than asString() for Extracting API Response Data in RestAssured</h1>
+
         <p>Have you ever needed to extract, validate, or compare data from API responses? Accurate validation is key when working with REST APIs. In <strong>RestAssured</strong>, one method to extract response data is using response.asString(), which converts the entire API response into a string. However, this approach has drawbacks—it treats everything, including numbers and objects, as strings, leading to potential validation issues. A better alternative is <strong>JsonPath</strong>, which extracts values while preserving their actual data types, making validation more accurate and reliable.</p>
         
         <h2>The Problem with response.asString()</h2>
