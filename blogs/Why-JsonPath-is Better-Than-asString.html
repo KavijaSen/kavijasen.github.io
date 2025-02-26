@@ -78,9 +78,11 @@
     "phone": "123-456-7890"
 }
         </code>
-        
+
+        <br>
         <h2>Method 1: Using response.asString()</h2>
         <h3>Code Demonstration</h3>
+        <br>
         <code>
 package org.kss.JSONpathTests;
 
@@ -111,18 +113,20 @@ public class JSONpathTests {
     }
 }
         </code>
-        
+        <br>
         <h3>Why This Is a Problem</h3>
         <ul>
             <li>asString()<strong>converts everything to a string</strong>, making validation tricky.</li>
             <li>Numbers like "number":1 are treated as strings, causing type mismatches.</li>
             <li>Extracting nested objects manually is <strong>error-prone</strong>.</li>
         </ul>
-        
+        <br>
         <h2>Method 2: Using JsonPath (Recommended)</h2>
         <p>JsonPath extracts values in their actual data types, making validation easier.</p>
-        
+        <br>
         <h3>Code Demonstration</h3>
+
+        <br>
         <code>
 package org.kss.JSONpathTests;
 
@@ -155,7 +159,7 @@ public class JSONpathTests {
     }
 }
         </code>
-        
+        <br>
         <h3>Why JsonPath Is Better</h3>
         <ul>
             <li>Extracts values in <strong>their actual types</strong> (String, Integer, Object, etc.).</li>
