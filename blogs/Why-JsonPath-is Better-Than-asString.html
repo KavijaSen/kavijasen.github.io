@@ -82,7 +82,6 @@
         <p>If we use asString() to convert the entire API response into a string and attempt to extract or compare the content, we may run into challenges. As you have already seen, the API response contains a mix of data types, including strings, integers, and nested objects. Converting the entire response into a string loses the structure of the data, making it difficult to accurately extract or compare specific values, 
 		especially when dealing with nested fields. This approach is not ideal for validating or working with complex, structured API responses.</p>
 		<p>Here’s an example of how asString() can be used to convert an API response into a string:</p>
-        <br>
         <code> public class JSONpathTests {
 
     private static final String STORE_USER_URL = "https://fakestoreapi.com/users/{id}";
