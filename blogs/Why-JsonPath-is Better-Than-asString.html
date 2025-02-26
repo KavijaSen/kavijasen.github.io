@@ -57,8 +57,8 @@
         <p>Using response.asString(), everything—including integers, booleans, and objects—is treated as a <strong>string</strong>. Let’s see an example API response:</p>
         
         <h3>Example API Response</h3>
-        <code>
-{
+       
+      <code>   {
     "id": 1,
     "email": "johndoe@example.com",
     "username": "johndoe",
@@ -78,16 +78,16 @@
         }
     },
     "phone": "123-456-7890"
-}
-        </code>
+}         </code>
+
 
         <br>
         <h2>Method 1: Using response.asString()</h2>
         <h3>Code Demonstration</h3>
         <br>
-        <code>
 
-public class JSONpathTests {
+
+        <code> public class JSONpathTests {
 
     private static final String STORE_USER_URL = "https://fakestoreapi.com/users/{id}";
 
@@ -106,8 +106,8 @@ public class JSONpathTests {
         // Check if "address" exists
         assertThat(responseBodyString.contains("address"), equalTo(true));
     }
-}
-        </code>
+}          </code>
+
         <br>
         <h3>Why This Is a Problem</h3>
         <ul>
@@ -122,8 +122,8 @@ public class JSONpathTests {
         <h3>Code Demonstration</h3>
 
         <br>
-        <code>
-public class JSONpathTests {
+
+        <code> public class JSONpathTests {
 
     private static final String STORE_USER_URL = "https://fakestoreapi.com/users/{id}";
 
@@ -143,8 +143,8 @@ public class JSONpathTests {
         // Validation
         assertThat(address, notNullValue());
     }
-}
-        </code>
+}          </code>
+
         <br>
         <h3>Why JsonPath Is Better</h3>
         <ul>
