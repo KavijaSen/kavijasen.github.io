@@ -205,4 +205,27 @@
 
 		}
 
+	$(document).ready(function () {
+    // Fade in effect when page loads
+    $("body").css("display", "none");
+    $("body").fadeIn(500);
+
+    // Fade out effect when clicking a link to another page
+    $("a").click(function (event) {
+        let target = $(this).attr("href");
+
+        if (target.startsWith("http") || target.startsWith("#")) {
+            // Allow external links and internal page anchors (#work, #home, etc.)
+            return;
+        }
+
+        event.preventDefault(); // Stop default behavior
+
+        $("body").fadeOut(500, function () {
+            window.location.href = target;
+        });
+    });
+});
+
+
 })(jQuery);
