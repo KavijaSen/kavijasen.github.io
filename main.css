@@ -2194,10 +2194,4 @@ input, select, textarea {
 
 		}
 
-@media screen and (max-width: 768px) {
-    body {
-        background-attachment: scroll; /* Fixes stretching issue */
-        background-size: cover; /* Ensures proper scaling */
-    }
-}
 
