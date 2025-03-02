@@ -1303,16 +1303,22 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
+body {
+    background-image: url("overlay.png"), url("bg.jpg");
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    background-position: top left, center center;
+    background-attachment: fixed;
+    overflow-y: auto;
+}
 
-    	background-image: url("overlay.png"), url("bg.jpg");
-    	background-repeat: repeat, no-repeat;
-    	background-size: cover, cover; /* Ensure both images scale properly */
-    	background-attachment: fixed;
-    	overflow-y: scroll;
-    	background-position: center center; /* Keeps the images centered */
-
-	}
+/* Mobile fix */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-size: auto, contain;
+    }
+}
 
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
