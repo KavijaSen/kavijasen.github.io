@@ -1314,14 +1314,6 @@ input, select, textarea {
 
 	}
 
-/* Mobile fix */
-@media (max-width: 768px) {
-    body {
-        background-attachment: scroll;
-        background-size: auto, contain;
-    }
-}
-
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
