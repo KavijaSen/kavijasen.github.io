@@ -227,5 +227,20 @@
     });
 });
 
+<script>
+    window.onload = function() {
+        var currentPage = window.location.pathname; // Get current page path
+        var navLinks = document.querySelectorAll('#nav a'); // Get all nav links
+        
+        // Loop through each nav link and check if it matches the current page
+        navLinks.forEach(function(link) {
+            var linkPath = link.getAttribute('href');
+            if (currentPage.includes(linkPath)) {
+                link.classList.add('active'); // Add 'active' class if matched
+            }
+        });
+    };
+</script>
+
 
 })(jQuery);
