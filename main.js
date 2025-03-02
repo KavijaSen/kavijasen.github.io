@@ -227,6 +227,24 @@
     });
 });
 
+	<script>
+    window.onload = function() {
+        // Get the current page URL
+        var currentPage = window.location.pathname;
 
+        // Get all navigation links
+        var navLinks = document.querySelectorAll('#nav a');
+
+        // Loop through each link to find the active one
+        navLinks.forEach(function(link) {
+            var linkPath = link.getAttribute('href');
+            
+            // Check if the link corresponds to the current page
+            if (currentPage.includes(linkPath)) {
+                link.classList.add('active'); // Add 'active' class to the link
+            }
+        });
+    };
+</script>
 
 })(jQuery);
