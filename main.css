@@ -1314,6 +1314,14 @@ input, select, textarea {
 
 	}
 
+/*mobile*/
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Prevents stretching on mobile */
+        background-size: cover, contain; /* Ensures bg.jpg scales correctly */
+    }
+}
+
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
