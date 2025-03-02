@@ -2212,3 +2212,7 @@ body::before {
 		}
 
 
+
+#nav a.active {
+    color: #ff6347;
+}
