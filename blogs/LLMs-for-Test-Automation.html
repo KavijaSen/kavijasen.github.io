@@ -8,6 +8,21 @@
     <noscript><link rel="stylesheet" href="../noscript.css" /></noscript>
 
     <title>What is a Test Framework?</title>
+
+    <style>
+
+        code {
+            background-color: black;
+            color: white;
+            display: block;
+            padding: 10px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            border-radius: 3px;
+        }
+
+    </style>
+    
 </head>
 <body class="is-preload">
 
@@ -70,7 +85,7 @@
     
     <h4>Example:</h4>
     <p><strong>Input:</strong> "Write a Selenium test script to check login functionality."</p>
-    <code>
+   <pre> <code>
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -86,7 +101,7 @@ driver.find_element(By.ID, "password").send_keys("Test@123", Keys.RETURN)
 # Assert successful login
 assert "Dashboard" in driver.title
 driver.quit()
-    </code>
+    </code></pre>
     
     <h3>3. Self-Healing Test Automation</h3>
     <p>LLMs can analyze failure logs, DOM structure changes, and element locators to update test scripts automatically, reducing maintenance overhead.</p>
@@ -96,7 +111,7 @@ driver.quit()
     
     <h4>Example:</h4>
     <p><strong>Input:</strong> "Generate a RestAssured test for validating a GET request response."</p>
-    <code>
+    <pre><code>
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
@@ -107,7 +122,7 @@ public class ApiTest {
         given().get("/users/1").then().statusCode(200).body("name", equalTo("John Doe"));
     }
 }
-    </code>
+    </code></pre>
     
     <h2>Security Considerations</h2>
     <p>Cloud-based LLMs might store or process input data, raising security concerns. Self-hosted solutions like Ollama allow running LLMs within an internal network for data privacy.</p>
