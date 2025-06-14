@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css"> 
+    <link rel="icon" href="../favicon.ico"> 
+    <noscript><link rel="stylesheet" href="../noscript.css" /></noscript>
+
+    <title>Negative Testing: What, Why, and How?</title>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Nav -->
+        <nav id="nav">
+            <a href="" class="icon solid fa-blog"><span>Doc</span></a>
+            <a href="../" class="icon solid fa-home"><span>Home</span></a>
+            <a href="../blog-list.html" class="icon solid fa-pencil-alt"><span>Blogs</span></a>
+        </nav>
+
+        <div id="main">
+        
+        <article id="blog" class="panel">
+        <header>
+            <h1>Negative Testing: What, Why, and How?</h1>
+            <p><small>Published on: May 19, 2025</small></p>
+        </header>
+
+        <!-- Blog Content -->
+        <article>
+            <p><strong>Writing about a basic yet essential concept in software testing today — Negative Test Cases.
+
+            The title already gives away the idea: Negative test cases are those designed to test the system's behavior when it receives invalid, unexpected, or incorrect inputs. These are the scenarios that a user shouldn't follow — but we still need to test them because users make mistakes, systems interact unpredictably, and vulnerabilities often hide in edge cases.</p>
+
+            <h2>Understanding Through a Simple Example</h2>
+
+  <p>Let’s take a common example: <strong>testing a login page</strong>.</p>
+
+  <p>In <strong>positive testing</strong>, the system is verified for correct behavior when a user enters a valid username and password. The expected result is a successful login and redirection to the dashboard or homepage.</p>
+
+  <p>Now comes <strong>negative testing</strong>. This involves checking how the system handles:</p>
+  <ul>
+    <li>Wrong username</li>
+    <li>Wrong password</li>
+    <li>Blank fields</li>
+    <li>Special characters or script injections</li>
+    <li>Inputs exceeding character limits</li>
+  </ul>
+
+  <p>The goal is to ensure the application:</p>
+  <ul>
+    <li><strong>Denies</strong> login with incorrect credentials</li>
+    <li><strong>Displays appropriate error messages</strong></li>
+    <li><strong>Handles input gracefully</strong> (no crashes or erratic behavior)</li>
+    <li><strong>Prevents security risks</strong> such as SQL injection</li>
+  </ul>
+
+  <h2>Going Beyond the Basics</h2>
+
+  <p>While login pages are simple examples, negative testing is vital across all testing layers. Here are a few advanced use cases:</p>
+
+  <h4>1. API Testing</h4>
+  <p>Sending malformed JSON or incorrect data types to an endpoint should return a proper error (e.g., <code>400 Bad Request</code>) and not crash the service.</p>
+
+  <h4>2. Form Validation</h4>
+  <p>Examples include:</p>
+  <ul>
+    <li>Missing required fields</li>
+    <li>Incorrect date formats</li>
+    <li>Entering numbers where text is expected</li>
+    <li>Invalid cross-field dependencies (e.g., end date before start date)</li>
+  </ul>
+
+  <h4>3. Database-Level Testing</h4>
+  <p>Testing for violations of:</p>
+  <ul>
+    <li>Unique constraints</li>
+    <li>Foreign key relationships</li>
+    <li>Null constraints</li>
+  </ul>
+
+  <h4>4. Security-Focused Testing</h4>
+  <p>Includes attempts such as:</p>
+  <ul>
+    <li>Bypassing authentication</li>
+    <li>Accessing unauthorized content</li>
+    <li>Injecting SQL or scripts</li>
+  </ul>
+
+  <h2>Why Negative Testing Matters</h2>
+
+  <p>Negative test cases help:</p>
+  <ul>
+    <li>Uncover hidden bugs</li>
+    <li>Validate error handling and fallback processes</li>
+    <li>Prevent application crashes</li>
+    <li>Strengthen data validation and input restrictions</li>
+    <li>Improve user experience with meaningful feedback</li>
+  </ul>
+
+  <h3>Visual: Positive vs Negative Testing</h3>
+
+  <pre>
++---------------------+          +------------------------+
+|  Valid Credentials  | -------> |    Login Successful    |
++---------------------+          +------------------------+
+        (Positive Test)
+
++---------------------+          +------------------------+
+| Invalid Credentials | -------> |   Show Error Message   |
++---------------------+          +------------------------+
+        (Negative Test)
+  </pre>
+
+  <p>This visual can be extended further using tools like draw.io or Canva by adding various negative test scenarios such as blank fields, special character inputs, etc.</p>
+
+  <h2>Final Thoughts</h2>
+
+  <p>While positive test cases confirm that the application performs as intended, <strong>negative test cases ensure it doesn't do what it shouldn't</strong>. Both are essential, but negative testing often reveals the real-world issues that cause systems to break. A robust testing strategy is never complete without them.</p>
+            
+        </article>
+
+        <!-- Footer -->
+        <footer>
+            <p><a href="../blog-list.html" class="button">Back to Blog List</a></p>
+        </footer>
+
+    </div> 
+
+    <!-- Scripts -->
+    <script src="../jquery.min.js"></script>
+    <script src="../browser.min.js"></script>
+    <script src="../breakpoints.min.js"></script>
+    <script src="../util.js"></script>
+    <script src="../main.js"></script>
+
+</body>
+</html>
