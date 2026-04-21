@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css"> 
+    <link rel="icon" href="../favicon.ico"> 
+    <noscript><link rel="stylesheet" href="../noscript.css" /></noscript>
+
+    <title>Building a Login Test Automation Framework with Selenium & Azure DevOps</title>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Nav -->
+        <nav id="nav">
+            <a href="" class="icon solid fa-blog"><span>Doc</span></a>
+            <a href="../" class="icon solid fa-home"><span>Home</span></a>
+            <a href="../blog-list.html" class="icon solid fa-pencil-alt"><span>Blogs</span></a>
+        </nav>
+
+        <div id="main">
+        
+        <article id="blog" class="panel">
+        <header>
+            <h1>Building a Login Test Automation Framework with Selenium & Azure DevOps</h1>
+            <p><small>Published on: April 21, 2026</small></p>
+        </header>
+
+        <!-- Blog Content -->
+        <article>
+
+            <p>In this project, I built an end-to-end test automation framework to validate the login functionality of a web application. The goal was to simulate a real-world QA workflow by combining manual testing, automation, version control, and CI/CD practices.</p>
+
+            <h2>Project Overview</h2>
+            <p>The application under test was a sample login page. The objective was to validate both positive and negative login scenarios using automation.</p>
+
+            <h3>Test Scenarios Covered:</h3>
+            <ul>
+                <li>Valid login with correct credentials</li>
+                <li>Invalid login with incorrect username/password</li>
+                <li>Error message validation</li>
+            </ul>
+
+            <h2>Tools & Technologies Used</h2>
+            <ul>
+                <li><strong>Python</strong> – Used to write automation scripts</li>
+                <li><strong>Selenium WebDriver</strong> – Used to automate browser interactions</li>
+                <li><strong>Pytest</strong> – Used as the test runner to execute test cases</li>
+                <li><strong>Azure DevOps</strong> – Used for test case management and CI pipeline</li>
+                <li><strong>Git & GitHub</strong> – Used for version control and code hosting</li>
+            </ul>
+
+            <h2>Framework Design</h2>
+            <p>The automation framework was designed using the <strong>Page Object Model (POM)</strong> to improve code maintainability and reusability. This structure separates test logic from UI element locators.</p>
+
+            <h3>Example Flow:</h3>
+            <pre>
+Open Login Page  
+Enter Username & Password  
+Click Login  
+Validate Success/Error Message  
+            </pre>
+
+            <h2>CI/CD with Azure Pipelines</h2>
+            <p>The project was integrated with Azure Pipelines to enable Continuous Integration (CI). The pipeline automatically runs whenever code is pushed to the repository.</p>
+
+            <h3>Pipeline Workflow:</h3>
+            <ul>
+                <li>Fetch code from GitHub repository</li>
+                <li>Install Python dependencies</li>
+                <li>Execute Selenium tests using Pytest</li>
+                <li>Generate test results (JUnit XML)</li>
+                <li>Generate HTML test report</li>
+                <li>Publish test results and reports</li>
+            </ul>
+
+            <h3>Pipeline YAML (Simplified):</h3>
+            <pre>
+trigger:
+- main
+
+steps:
+- install dependencies
+- run tests
+- publish results
+            </pre>
+
+            <h2>Test Execution & Reporting</h2>
+            <p>Test execution is handled by Pytest, which provides clear pass/fail results. Additionally, an HTML report is generated after execution to provide a visual summary of test results.</p>
+
+            <h3>Sample Output:</h3>
+            <pre>
+2 tests collected
+2 passed
+            </pre>
+
+            <h2>Key Learnings</h2>
+            <ul>
+                <li>Understanding end-to-end QA workflow from test design to automation</li>
+                <li>Implementing Page Object Model for scalable automation</li>
+                <li>Using Git for version control and managing code changes</li>
+                <li>Integrating CI pipelines using Azure DevOps</li>
+                <li>Generating and interpreting test reports</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>This project helped me gain practical experience in building an automation framework and integrating it with a CI pipeline. It reflects how modern QA teams ensure continuous quality through automation and DevOps practices.</p>  
+            
+        </article>
+
+        <!-- Footer -->
+        <footer>
+            <p><a href="../blog-list.html" class="button">Back to Blog List</a></p>
+        </footer>
+
+    </div> 
+
+    <!-- Scripts -->
+    <script src="../jquery.min.js"></script>
+    <script src="../browser.min.js"></script>
+    <script src="../breakpoints.min.js"></script>
+    <script src="../util.js"></script>
+    <script src="../main.js"></script>
+
+</body>
+</html>
